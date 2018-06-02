@@ -4,10 +4,22 @@
 
 #include "io_ftdi.h"
 
+#define PicoEVB 0
+#define ULX3S 1
+
+#if PicoEVB
 #define PORT_TCK            0x01
 #define PORT_TDI            0x02
 #define PORT_TDO            0x04
 #define PORT_TMS            0x08
+#endif
+#if ULX3S
+#define PORT_TCK            0x20
+#define PORT_TDI            0x80
+#define PORT_TDO            0x08
+#define PORT_TMS            0x40
+#endif
+
 #define IO_OUTPUT (PORT_TCK|PORT_TDI|PORT_TMS)
 
 #define USE_ASYNC
