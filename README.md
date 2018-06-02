@@ -1,3 +1,12 @@
+Xilinx virtual cable daemon for FT231X JTAG pinout on ULX3S board.
+
+    xvcd -P 0x6015
+
+Vivado recognizes this JTAG cable and prints correct JTAG ID for
+Lattice ECP5-45F on ULX3S board.
+
+    8<---- cut here ---- odiginal README follows ----
+
 This is a daemon that listens to "xilinx_xvc" (xilinx virtual cable) traffic and 
 operates JTAG over an FTDI in bitbang mode.
 
