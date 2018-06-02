@@ -9,10 +9,6 @@
 // Configuration
 #define BAUD_RATE (3000000 / 16) // In bitbang mode, clock rate is 16x baud rate
 
-#define PORT_TCK            0x01
-#define PORT_TDI            0x02
-#define PORT_TDO            0x04
-#define PORT_TMS            0x08
 #define IO_OUTPUT (PORT_TCK|PORT_TDI|PORT_TMS)
 
 #define CHK_STAT(xx) CheckFTStatus(xx, __LINE__)
